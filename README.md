@@ -32,7 +32,7 @@ Note - The gathering of information about the images is done through the impleme
 #Documentation
 
 ###Getting tags for an Image
-As simple as a pie     
+Pretty simple -  
 
 
      Onyx.with(Context context).fromURL(String url).getTagsfromApi(new OnTaskCompletion() {
