@@ -58,8 +58,7 @@ Clarifai
 
 -----------     
 ###How it looks like?     
-    
-	[![Screenshot](animgif.gif)](https://cl.ly/0o3X3Y1k3M3B)
+[![Screenshot](animgif.gif)](https://cl.ly/0o3X3Y1k3M3B)
     
 
 
