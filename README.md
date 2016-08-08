@@ -56,8 +56,10 @@ Pretty simple -
 ---------
 ###Special thanks to:       
 
-Clarifai   
-
+Clarifai         
+----------      
+ 
+ **Please do notify us if you're using our library in your app. We'd be more than happy to list your app here!**    
 -----------     
 ###How it looks like?     
 [![Screenshot](anim2.gif)](https://cl.ly/1z1j0847331d)
