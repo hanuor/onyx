@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)
+
 # onyx
 ----      
 Onyx is a library for android that can be used by developers to understand what type of content they are enabling inside their apps.
