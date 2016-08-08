@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 pd.setMessage("Loading...");
                 pd.show();
-                Onyx.with(MainActivity.this).fromURL(m).getTagsfromApi(new OnTaskCompletion() {
+                Onyx.with(MainActivity.this).fromURL(m).getTagsandProbability(new OnTaskCompletion() {
                     @Override
                     public void onComplete(ArrayList<String> response) {
                         Log.d("Class",""+response);

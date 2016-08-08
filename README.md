@@ -16,17 +16,17 @@ Note - The gathering of information about the images is done through the impleme
     mavenCentral() // jcenter() works as well because it pulls from Maven Central
     }
     dependencies {
-    compile 'com.hanuor.onyx:onyx:0.1.2'    
+    compile 'com.hanuor.onyx:onyx:0.1.3'    
     }
 **or** simply under dependencies section:   
   
-    compile 'com.hanuor.onyx:onyx:0.1.2'  
+    compile 'com.hanuor.onyx:onyx:0.1.3'  
 
 ### or Using Maven:
     <dependency>
     <groupId>com.hanuor.onyx</groupId>
     <artifactId>onyx</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <type>pom</type>
     </dependency>
 
@@ -35,6 +35,7 @@ Note - The gathering of information about the images is done through the impleme
 
 ###Getting tags for an Image
 Pretty simple -  
+**Use **getTagsfromApi() method.** Example is given below      
 
 
      Onyx.with(Context context).fromURL(String url).getTagsfromApi(new OnTaskCompletion() {
@@ -48,6 +49,20 @@ Pretty simple -
             }
         });
 
+		
+###Getting tags as well as their probability of occurring
+      
+	Use the **.getTagsandProbability() method.** Example is given below       
+
+      Onyx.with(Context context).fromURL(String url).getTagsandProbability(new OnTaskCompletion() {
+                    @Override
+                    public void onComplete(ArrayList<String> response) {
+                       //results will be in the form of array-list
+					   //for eg. - [Mammal-0.9972132, Wolf-0.9962321, Snow-0.993212]
+					   //Do whatever you want to do here
+                    }
+                });
+				         
 ------
 ###Compatibility
 

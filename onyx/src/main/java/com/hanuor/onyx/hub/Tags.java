@@ -19,6 +19,7 @@ public class Tags {
     Tags tags = null;
     String urls = null;
     ArrayList<String> probableTags = null;
+    ArrayList<String> probandTags = null;
     KeyContainer keyContainer = new KeyContainer();
     ClarifaiClient clarifai = new ClarifaiClient(keyContainer.getApiID(), keyContainer.getApiSecret());
     public Tags(Context context){
@@ -31,36 +32,73 @@ public class Tags {
     public void setInstance(Tags tags){
         this.tags = tags;
     }
+
     public Tags fromURL(String urls){
         tags.urls = urls;
         return tags;
     }
-    public void getTagsfromApi(final OnTaskCompletion onTaskCompletion){
+    public void getTagsfromApi(final OnTaskCompletion onTaskCompletion) {
         probableTags = new ArrayList<String>();
-        if(tags.urls.length() == 0){
-            ErrorHandler.writeError("No string path is entered");
+        try {
+            if (tags.urls.length() == 0) {
+                ErrorHandler.writeError("No string path is entered");
 
-        }else{
-            new AsyncTask<String, Void, ArrayList<String>>() {
+            } else {
+                new AsyncTask<String, Void, ArrayList<String>>() {
 
-                @Override
-                protected ArrayList<String> doInBackground(String... strings) {
-                    List<RecognitionResult> results =
-                            clarifai.recognize(new RecognitionRequest(tags.urls));
-                    for (Tag tag : results.get(0).getTags()) {
-                        probableTags.add(tag.getName());
+                    @Override
+                    protected ArrayList<String> doInBackground(String... strings) {
+                        List<RecognitionResult> results =
+                                clarifai.recognize(new RecognitionRequest(tags.urls));
+                        for (Tag tag : results.get(0).getTags()) {
+                            probableTags.add(tag.getName());
+                        }
+                        return probableTags;
+
                     }
-                    return probableTags;
 
-                }
-
-                @Override
+                    @Override
                     protected void onPostExecute(ArrayList<String> strings) {
                         super.onPostExecute(strings);
                         onTaskCompletion.onComplete(strings);
                     }
                 }.execute(tags.urls);
 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void getTagsandProbability(final OnTaskCompletion onTaskCompletion){
+        probandTags = new ArrayList<String>();
+        try {
+            if(tags.urls.length() == 0){
+                ErrorHandler.writeError("No string path is entered");
+
+            }else{
+                new AsyncTask<String, Void, ArrayList<String>>() {
+
+                    @Override
+                    protected ArrayList<String> doInBackground(String... strings) {
+                        List<RecognitionResult> results =
+                                clarifai.recognize(new RecognitionRequest(tags.urls));
+                        for (Tag tag : results.get(0).getTags()) {
+                            probandTags.add(tag.getName()+"-"+tag.getProbability());
+                        }
+                        return probandTags;
+
+                    }
+
+                    @Override
+                    protected void onPostExecute(ArrayList<String> strings) {
+                        super.onPostExecute(strings);
+                        onTaskCompletion.onComplete(strings);
+                    }
+                }.execute(tags.urls);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

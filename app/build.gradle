@@ -22,8 +22,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile files('libs/gcm.jar')
     compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.github.hanuor:pearl:0.0.6'
+    compile 'com.github.hanuor:pearl:0.0.8'
     compile project(':onyx')
 }
