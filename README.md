@@ -35,7 +35,7 @@ Note - The gathering of information about the images is done through the impleme
 
 ###Getting tags for an Image
 Pretty simple -  
-**Use **getTagsfromApi() method.** Example is given below      
+Use **getTagsfromApi() method.** Example is given below      
 
 
      Onyx.with(Context context).fromURL(String url).getTagsfromApi(new OnTaskCompletion() {
@@ -51,8 +51,7 @@ Pretty simple -
 
 		
 ###Getting tags as well as their probability of occurring
-      
-	Use the **.getTagsandProbability() method.** Example is given below       
+Use the **.getTagsandProbability() method.** Example is given below       
 
       Onyx.with(Context context).fromURL(String url).getTagsandProbability(new OnTaskCompletion() {
                     @Override
