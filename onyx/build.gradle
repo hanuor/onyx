@@ -12,7 +12,7 @@ ext {
     siteUrl = 'https://github.com/hanuor/onyx'
     gitUrl = 'https://github.com/hanuor/onyx.git'
 
-    libraryVersion = '1.1.1'
+    libraryVersion = '1.1.2'
 
     developerId = 'hanuor'
     developerName = 'Shantanu Johri'
@@ -45,7 +45,6 @@ android {
 dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
-    //compile 'com.google.code.gson:gson:2.2.4'  // Added.
 
 }
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

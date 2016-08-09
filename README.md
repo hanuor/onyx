@@ -16,19 +16,25 @@ Note - The gathering of information about the images is done through the impleme
     mavenCentral() // jcenter() works as well because it pulls from Maven Central
     }
     dependencies {
-    compile 'com.hanuor.onyx:onyx:1.1.1'    
+    compile 'com.hanuor.onyx:onyx:1.1.2'    
     }
 **or** simply under dependencies section:   
   
-    compile 'com.hanuor.onyx:onyx:1.1.1'  
+    compile 'com.hanuor.onyx:onyx:1.1.2'  
 
 ### or Using Maven:
     <dependency>
     <groupId>com.hanuor.onyx</groupId>
     <artifactId>onyx</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <type>pom</type>
-    </dependency>
+    </dependency>    
+
+### or Using Ivy:         
+     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.2'>
+     <artifact name='$AID' ext='pom'></artifact>
+     </dependency>	    
+	 
 
 ------
 #Documentation
@@ -61,6 +67,33 @@ Use the **.getTagsandProbability() method.** Example is given below
 					   //Do whatever you want to do here
                     }
                 });
+				
+				
+###Getting tags from a video (Whaaaaa......at!)
+**Convert video into a stream of byte[].** and see the example below.    
+
+     
+	 Onyx.with(Context context).fromVideoArray(byte[] videoArray).getTagsfromApi(new OnTaskCompletion() {
+					@Override
+                    public void onComplete(ArrayList<String> response) {
+                       //results will be in the form of array-list
+					   //Do whatever you want to do here
+                    }
+                });       
+				
+###Getting tags and their probability of occurring from a video     
+**Convert video into a stream of byte[].** and see the example below.    
+     
+	 Onyx.with(Context context).fromVideoArray(byte[] videoArray).getTagsandProbability(new OnTaskCompletion() {
+					@Override
+                    public void onComplete(ArrayList<String> response) {
+                       //results will be in the form of array-list
+					   //for eg. - [Mammal-0.9972132, Wolf-0.9962321, Snow-0.993212]
+					  
+					   //Do whatever you want to do here
+                    }
+                });  
+				
 				         
 ------
 ###Compatibility
