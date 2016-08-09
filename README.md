@@ -16,17 +16,17 @@ Note - The gathering of information about the images is done through the impleme
     mavenCentral() // jcenter() works as well because it pulls from Maven Central
     }
     dependencies {
-    compile 'com.hanuor.onyx:onyx:0.1.3'    
+    compile 'com.hanuor.onyx:onyx:1.1.1'    
     }
 **or** simply under dependencies section:   
   
-    compile 'com.hanuor.onyx:onyx:0.1.3'  
+    compile 'com.hanuor.onyx:onyx:1.1.1'  
 
 ### or Using Maven:
     <dependency>
     <groupId>com.hanuor.onyx</groupId>
     <artifactId>onyx</artifactId>
-    <version>0.1.3</version>
+    <version>1.1.1</version>
     <type>pom</type>
     </dependency>
 
