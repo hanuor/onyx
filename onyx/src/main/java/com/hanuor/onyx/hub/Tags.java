@@ -2,11 +2,12 @@ package com.hanuor.onyx.hub;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
-import com.clarifai.api.ClarifaiClient;
-import com.clarifai.api.RecognitionRequest;
-import com.clarifai.api.RecognitionResult;
-import com.clarifai.api.Tag;
+import com.hanuor.onyx.helper.ClarifaiClient;
+import com.hanuor.onyx.helper.RecognitionRequest;
+import com.hanuor.onyx.helper.RecognitionResult;
+import com.hanuor.onyx.helper.Tag;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +83,8 @@ public class Tags {
                     protected ArrayList<String> doInBackground(String... strings) {
                         List<RecognitionResult> results =
                                 clarifai.recognize(new RecognitionRequest(tags.urls));
+                        Log.d("Onn",""+results.size());
+
                         for (Tag tag : results.get(0).getTags()) {
                             probandTags.add(tag.getName()+"-"+tag.getProbability());
                         }
@@ -101,4 +104,7 @@ public class Tags {
             e.printStackTrace();
         }
     }
+
+
+
 }

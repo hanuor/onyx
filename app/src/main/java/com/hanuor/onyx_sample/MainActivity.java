@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     Button btn;
     TextView tv;
+    ArrayList<String> str;
+
+    ArrayList<String> str2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         final ProgressDialog pd = new ProgressDialog(MainActivity.this);
         final String m = "http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/rocky_mountains_gray_wolf.jpg";
                 Pearl.imageLoader(MainActivity.this,m,imageView,0);
+        str = new ArrayList<String>();
+        str2 = new ArrayList<String>();
+        str.add("tree");
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                         pd.dismiss();
                         tv.setText(response.toString());
                         tv.setTextColor(Color.parseColor("#ffffff"));
+
+
                     }
                 });
             }
