@@ -56,11 +56,16 @@ public class Tags {
                     protected ArrayList<String> doInBackground(String... strings) {
                         List<RecognitionResult> results =
                                 clarifai.recognize(new RecognitionRequest(tags.urls));
+                        if(results.size() != 0){
+
+
                         for (Tag tag : results.get(0).getTags()) {
                             probableTags.add(tag.getName());
                         }
                         return probableTags;
-
+                        }else{
+                            return null;
+                        }
                     }
 
                     @Override
@@ -76,12 +81,17 @@ public class Tags {
 
                     @Override
                     protected ArrayList<String> doInBackground(byte[]... bytes) {
+
                         List<RecognitionResult> results =
                                 clarifai.recognize(new RecognitionRequest(tags.videoArray));
-                        for (Tag tag : results.get(0).getTags()) {
+                        if( results.size() != 0){
+                            for (Tag tag : results.get(0).getTags()) {
                             probableTags.add(tag.getName());
+                            }
+                            return probableTags;
+                        }else{
+                            return null;
                         }
-                        return probableTags;
                     }
 
                     @Override
