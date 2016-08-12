@@ -11,14 +11,7 @@ Note - The gathering of information about the images is done through the impleme
 ![](https://s8.postimg.org/pla6wqs5h/onyx.png)
 ------    
 #Download    
-###Using Gradle:
-    repositories {
-    mavenCentral() // jcenter() works as well because it pulls from Maven Central
-    }
-    dependencies {
-    compile 'com.hanuor.onyx:onyx:1.1.3'    
-    }
-**or** simply under dependencies section:   
+###Using Gradle: under dependencies section:   
   
     compile 'com.hanuor.onyx:onyx:1.1.3'  
 
