@@ -1,5 +1,6 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)    
 [![API](https://img.shields.io/badge/API-7%2B-yellow.svg?style=plastic)](https://android-arsenal.com/api?level=7)
+[![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg?maxAge=2592000)]()
 
 # onyx
 ----      
