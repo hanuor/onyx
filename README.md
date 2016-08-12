@@ -24,7 +24,7 @@ Note - The gathering of information about the images is done through the impleme
     </dependency>    
 
 ### or Using Ivy:         
-     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.2'>
+     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.3'>
      <artifact name='$AID' ext='pom'></artifact>
      </dependency>	    
 	 
