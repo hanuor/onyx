@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2016 Hanuor Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.hanuor.onyx_sample;
 
 import android.app.ProgressDialog;
@@ -16,6 +32,7 @@ import com.hanuor.pearl.Pearl;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageView;
@@ -29,15 +46,15 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.ivy);
         tv = (TextView) findViewById(R.id.textView);
         final ProgressDialog pd = new ProgressDialog(MainActivity.this);
-        final String m = "http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/rocky_mountains_gray_wolf.jpg";
-                Pearl.imageLoader(MainActivity.this,m,imageView,0);
+        final String mImage = "https://cdn.tutsplus.com/photo/uploads/legacy/720_blackwhiteRU/65.jpg";
+        Pearl.imageLoader(MainActivity.this,mImage,imageView,0);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pd.setMessage("Loading...");
                 pd.show();
-                Onyx.with(MainActivity.this).fromURL(m).getTagsfromApi( new OnTaskCompletion() {
+                Onyx.with(MainActivity.this).fromURL(mImage).getTagsfromApi( new OnTaskCompletion() {
                     @Override
                     public void onComplete(ArrayList<String> response) {
                         Log.d("Class",""+response);

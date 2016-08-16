@@ -15,18 +15,18 @@ Note - The gathering of information about the images is done through the impleme
 #Download    
 ###Using Gradle: under dependencies section:   
   
-    compile 'com.hanuor.onyx:onyx:1.1.3'  
+    compile 'com.hanuor.onyx:onyx:1.1.4'  
 
 ### or Using Maven:
     <dependency>
     <groupId>com.hanuor.onyx</groupId>
     <artifactId>onyx</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
     <type>pom</type>
     </dependency>    
 
 ### or Using Ivy:         
-     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.3'>
+     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.4'>
      <artifact name='$AID' ext='pom'></artifact>
      </dependency>	    
 	 
