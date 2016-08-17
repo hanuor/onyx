@@ -104,7 +104,10 @@ Clarifai
  **Please do notify us if you're using our library in your app. We'd be more than happy to list your app here!**    
 -----------     
 ###How it looks like?     
-[![Screenshot](anim2.gif)](https://cl.ly/1z1j0847331d)
+[![Screenshot](anim2.gif)](https://cl.ly/1z1j0847331d)      
+![](https://s8.postimg.org/i6vw11yph/playicon.png)
+[Onyx demo app](https://play.google.com/store/apps/details?id=com.hanuor.onyx_sample)
+
     
 
 
