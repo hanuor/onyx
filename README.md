@@ -12,7 +12,7 @@ Note - The gathering of information about the images is done through the impleme
 
 ![](https://s8.postimg.org/pla6wqs5h/onyx.png)
 ------    
-#Download    
+# Download    
 ### Using Gradle: under dependencies section:   
   
     compile 'com.hanuor.onyx:onyx:1.1.4'  
