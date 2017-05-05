@@ -13,7 +13,7 @@ Note - The gathering of information about the images is done through the impleme
 ![](https://s8.postimg.org/pla6wqs5h/onyx.png)
 ------    
 #Download    
-###Using Gradle: under dependencies section:   
+### Using Gradle: under dependencies section:   
   
     compile 'com.hanuor.onyx:onyx:1.1.4'  
 
@@ -32,9 +32,9 @@ Note - The gathering of information about the images is done through the impleme
 	 
 
 ------
-#Documentation
+# Documentation
 
-###Getting tags for an Image
+### Getting tags for an Image
 Pretty simple -  
 Use **.getTagsfromApi() method.** Example is given below      
 
@@ -51,7 +51,7 @@ Use **.getTagsfromApi() method.** Example is given below
         });
 
 		
-###Getting tags as well as their probability of occurring
+### Getting tags as well as their probability of occurring
 Use the **.getTagsandProbability() method.** Example is given below       
 
       Onyx.with(Context context).fromURL(String url).getTagsandProbability(new OnTaskCompletion() {
@@ -64,7 +64,7 @@ Use the **.getTagsandProbability() method.** Example is given below
                 });
 				
 				
-###Getting tags from a video (Whaaaaa......a!)
+### Getting tags from a video (Whaaaaa......a!)
 **Convert video into a stream of byte[].** and see the example below.    
 
      
@@ -76,7 +76,7 @@ Use the **.getTagsandProbability() method.** Example is given below
                     }
                 });       
 				
-###Getting tags and their probability of occurring from a video     
+### Getting tags and their probability of occurring from a video     
 **Convert video into a stream of byte[].** and see the example below.    
      
 	 Onyx.with(Context context).fromVideoArray(byte[] videoArray).getTagsandProbability(new OnTaskCompletion() {
@@ -91,12 +91,12 @@ Use the **.getTagsandProbability() method.** Example is given below
 				
 				         
 ------
-###Compatibility
+### Compatibility
 
 **Minimum Android SDK**: Onyx requires a minimum API level of **7**.    
 
 ---------
-###Special thanks to:       
+### Special thanks to:       
 
 Clarifai         
 ----------      
@@ -115,8 +115,8 @@ Clarifai
 
 ---------
 
-###License
-Copyright 2016 Hanuor, Inc.
+### License
+Copyright 2016 Hanuor.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
