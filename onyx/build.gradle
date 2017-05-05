@@ -27,7 +27,7 @@ ext {
     siteUrl = 'https://github.com/hanuor/onyx'
     gitUrl = 'https://github.com/hanuor/onyx.git'
 
-    libraryVersion = '1.1.4'
+    libraryVersion = '1.1.5'
 
     developerId = 'hanuor'
     developerName = 'Shantanu Johri'
@@ -39,12 +39,12 @@ ext {
 }
 android {
 
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 24
+        minSdkVersion 9
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
 
@@ -56,14 +56,14 @@ android {
         }
     }
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
     }
 }
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.0'
 
 }
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
