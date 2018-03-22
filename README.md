@@ -1,7 +1,3 @@
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/8gQadL9aTwTSuQ7JJtvRhKYH/hanuor/onyx'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/8gQadL9aTwTSuQ7JJtvRhKYH/hanuor/onyx.svg' />
-</a>
-
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)    
 [![API](https://img.shields.io/badge/API-7%2B-yellow.svg?style=plastic)](https://android-arsenal.com/api?level=7)
 [![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg?maxAge=2592000)]()
@@ -13,6 +9,9 @@ An example can be to limit adult content in apps specifically made for children.
 The possibilities are endless, there can be a zillion use case scenarios. Onyx is proud to be powered by world's best visual recognition technology - Clarifai.      
 Note - The gathering of information about the images is done through the implementation of technologies like Artificial intelligence, machine learning, and deep learning.
 
+----
+# Code is under maintainence.
+### For now the default branch is set to develop. Some features may not work as expected. If you wish to contribute then use the code from the master branch.
 
 ![](https://s8.postimg.org/pla6wqs5h/onyx.png)
 ------    
