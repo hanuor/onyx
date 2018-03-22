@@ -18,6 +18,15 @@ package com.hanuor.onyx;
 import android.content.Context;
 
 import com.hanuor.onyx.hub.Tags;
+import com.hanuor.onyx.hub.Utils.DisposableManager;
+
+import java.util.concurrent.Callable;
+
+import io.reactivex.Single;
+import io.reactivex.SingleObserver;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class Onyx {
     volatile static Tags mTags =  null;
@@ -25,5 +34,34 @@ public class Onyx {
         mTags = new Tags(context);
         mTags.setInstance(mTags);
         return mTags;
+    }
+
+    private static void buildClient(){
+        final Disposable disposable = null;
+        Single<Boolean> mPerformRequest = Single.fromCallable(new Callable<Boolean>() {
+
+            @Override
+            public Boolean call() throws Exception {
+                return true;
+            }
+        });
+        mPerformRequest.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new SingleObserver<Boolean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        DisposableManager.add(d);
+                    }
+
+                    @Override
+                    public void onSuccess(Boolean s) {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+                });
     }
 }

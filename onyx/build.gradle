@@ -60,12 +60,15 @@ android {
         sourceCompatibility 1.7
     }
 }
-
+repositories {
+    mavenCentral()
+}
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    compile 'com.android.support:appcompat-v7:25.+'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.+'
     implementation 'io.reactivex.rxjava2:rxjava:2.+'
+    compile 'com.clarifai.clarifai-api2:core:2.3.0'
 }
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
