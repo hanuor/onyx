@@ -1,4 +1,6 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)    
+[![API](https://img.shields.io/badge/API-7%2B-yellow.svg?style=plastic)](https://android-arsenal.com/api?level=7)
+[![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg?maxAge=2592000)]()
 
 # onyx
 ----      
@@ -7,39 +9,35 @@ An example can be to limit adult content in apps specifically made for children.
 The possibilities are endless, there can be a zillion use case scenarios. Onyx is proud to be powered by world's best visual recognition technology - Clarifai.      
 Note - The gathering of information about the images is done through the implementation of technologies like Artificial intelligence, machine learning, and deep learning.
 
+----
+# Code is under maintainence.
+### For now the default branch is set to develop. Some features may not work as expected. If you wish to contribute then use the code from the master branch.
 
 ![](https://s8.postimg.org/pla6wqs5h/onyx.png)
 ------    
-#Download    
-###Using Gradle:
-    repositories {
-    mavenCentral() // jcenter() works as well because it pulls from Maven Central
-    }
-    dependencies {
-    compile 'com.hanuor.onyx:onyx:1.1.3'    
-    }
-**or** simply under dependencies section:   
+# Download    
+### Using Gradle: under dependencies section:   
   
-    compile 'com.hanuor.onyx:onyx:1.1.3'  
+    compile 'com.hanuor.onyx:onyx:1.1.4'  
 
 ### or Using Maven:
     <dependency>
     <groupId>com.hanuor.onyx</groupId>
     <artifactId>onyx</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
     <type>pom</type>
     </dependency>    
 
 ### or Using Ivy:         
-     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.2'>
+     <dependency org='com.hanuor.onyx' name='onyx' rev='1.1.4'>
      <artifact name='$AID' ext='pom'></artifact>
      </dependency>	    
 	 
 
 ------
-#Documentation
+# Documentation
 
-###Getting tags for an Image
+### Getting tags for an Image
 Pretty simple -  
 Use **.getTagsfromApi() method.** Example is given below      
 
@@ -56,7 +54,7 @@ Use **.getTagsfromApi() method.** Example is given below
         });
 
 		
-###Getting tags as well as their probability of occurring
+### Getting tags as well as their probability of occurring
 Use the **.getTagsandProbability() method.** Example is given below       
 
       Onyx.with(Context context).fromURL(String url).getTagsandProbability(new OnTaskCompletion() {
@@ -69,7 +67,7 @@ Use the **.getTagsandProbability() method.** Example is given below
                 });
 				
 				
-###Getting tags from a video (Whaaaaa......a!)
+### Getting tags from a video (Whaaaaa......a!)
 **Convert video into a stream of byte[].** and see the example below.    
 
      
@@ -81,7 +79,7 @@ Use the **.getTagsandProbability() method.** Example is given below
                     }
                 });       
 				
-###Getting tags and their probability of occurring from a video     
+### Getting tags and their probability of occurring from a video     
 **Convert video into a stream of byte[].** and see the example below.    
      
 	 Onyx.with(Context context).fromVideoArray(byte[] videoArray).getTagsandProbability(new OnTaskCompletion() {
@@ -96,12 +94,12 @@ Use the **.getTagsandProbability() method.** Example is given below
 				
 				         
 ------
-###Compatibility
+### Compatibility
 
 **Minimum Android SDK**: Onyx requires a minimum API level of **7**.    
 
 ---------
-###Special thanks to:       
+### Special thanks to:       
 
 Clarifai         
 ----------      
@@ -109,7 +107,10 @@ Clarifai
  **Please do notify us if you're using our library in your app. We'd be more than happy to list your app here!**    
 -----------     
 ###How it looks like?     
-[![Screenshot](anim2.gif)](https://cl.ly/1z1j0847331d)
+[![Screenshot](anim2.gif)](https://cl.ly/1z1j0847331d)      
+![](https://s8.postimg.org/i6vw11yph/playicon.png)
+[Onyx demo app](https://play.google.com/store/apps/details?id=com.hanuor.onyx_sample)
+
     
 
 
@@ -117,8 +118,8 @@ Clarifai
 
 ---------
 
-###License
-Copyright 2016 Hanuor, Inc.
+### License
+Copyright 2016 Hanuor.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
