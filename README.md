@@ -1,3 +1,7 @@
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/8gQadL9aTwTSuQ7JJtvRhKYH/hanuor/onyx'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/8gQadL9aTwTSuQ7JJtvRhKYH/hanuor/onyx.svg' />
+</a>
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Onyx-red.svg?style=plastic)](http://android-arsenal.com/details/1/4089)    
 [![API](https://img.shields.io/badge/API-7%2B-yellow.svg?style=plastic)](https://android-arsenal.com/api?level=7)
 [![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg?maxAge=2592000)]()
